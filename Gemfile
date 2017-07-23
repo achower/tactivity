@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 # Make my app look pretty please
 gem 'bootstrap-sass'
+# Lets make some users!
+gem 'devise', '~> 4.3.0'
 
 group :production do
   gem 'pg'
