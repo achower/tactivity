@@ -1,0 +1,2 @@
+class Tac < ApplicationRecord
+end
