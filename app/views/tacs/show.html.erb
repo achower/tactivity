@@ -5,5 +5,7 @@
   <%= @tac.description %>
 </p>
 
+<% if @tac.user == current_user %>
 <%= link_to 'Edit', edit_tac_path(@tac) %> |
+<% end %>
 <%= link_to 'Back', tacs_path %>
