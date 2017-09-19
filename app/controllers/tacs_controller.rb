@@ -53,6 +53,6 @@ class TacsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tac_params
-      params.require(:tac).permit(:description)
+      params.require(:tac).permit(:description, :image)
     end
 end

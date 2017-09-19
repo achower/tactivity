@@ -26,6 +26,8 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 # Lets make some users!
 gem 'devise', '~> 4.3.0'
+# Images are good
+gem "paperclip", "~> 5.0.0"
 
 group :production do
   gem 'pg'
