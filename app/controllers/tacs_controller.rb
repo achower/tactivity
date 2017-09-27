@@ -47,7 +47,7 @@ class TacsController < ApplicationController
     end
 
     def correct_user
-      @tac = current_user.tacs.find_by(params[:id])
+      @tac = current_user.tacs.find(params[:id])
       redirect_to tacs_path, notice: "Not authorized to manage this tac" if @tac.nil?
     end
 
