@@ -28,6 +28,8 @@ gem 'bootstrap-sass'
 gem 'devise', '~> 4.3.0'
 # Images are good
 gem "paperclip", "~> 5.0.0"
+# Images on Heroku are good too
+gem 'aws-sdk', '< 2.0'
 
 group :production do
   gem 'pg'
