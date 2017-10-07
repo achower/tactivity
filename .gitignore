@@ -16,10 +16,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
 /node_modules
 /yarn-error.log
-
 .byebug_history
-
 .DS_Store
+/public/system/*

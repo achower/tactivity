@@ -1,34 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Tacs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tacs.each do |tac| %>
-      <tr>
-        <td><%= image_tag tac.image.url(:medium) %></td>
-        <td><%= tac.description %></td>
-        <td><%= tac.user.email %></td>
-        <td><%= link_to 'Show', tac %></td>
+<div id="tacs" class="transitions-enabled">
+  <% @tacs.each do |tac| %>
+    <div class="box panel panel-default"> 
+      <div class="panel-body">
+        <%= image_tag tac.image.url(:medium) %>
+        <%= tac.description %>
+        <%= tac.user.email %>
+        <%= link_to 'Show', tac %>
         <% if tac.user == current_user %>
-        <td><%= link_to 'Edit', edit_tac_path(tac) %></td>
-        <td><%= link_to 'Destroy', tac, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%= link_to 'Edit', edit_tac_path(tac) %>
+          <%= link_to 'Destroy', tac, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<% if user_signed_in? %>
-<%= link_to 'New Tac', new_tac_path %>
-<% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
