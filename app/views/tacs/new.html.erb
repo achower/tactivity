@@ -1,5 +1,7 @@
+<%= link_to tacs_path do %>
+ <span class="glyphicon glyphicon-chevron-left"></span> Back
+<% end %>
+
 <h1>New Tac</h1>
 
 <%= render 'form', tac: @tac %>
-
-<%= link_to 'Back', tacs_path %>

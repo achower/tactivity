@@ -4,13 +4,15 @@ $body-bg: #3498db;
 $font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-inverse-bg: #454DE1;
 $navbar-inverse-link-color: white;
+$navbar-inverse-link-hover-color: #2BE189;
+$navbar-inverse-brand-hover-color: #2BE189;
 $navbar-height: 45px;
-$navbar-default-brand-color: #2BE189;
 $brand-primary: #2BE189;
 $jumbotron-bg: #ecf0f1;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
 .center {
      text-align: center;

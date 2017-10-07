@@ -1,14 +1,21 @@
+<%= render 'pages/home' unless user_signed_in? %>
+
 <div id="tacs" class="transitions-enabled">
   <% @tacs.each do |tac| %>
     <div class="box panel panel-default"> 
       <div class="panel-body">
-        <%= image_tag tac.image.url(:medium) %>
-        <%= tac.description %>
-        <%= tac.user.email %>
-        <%= link_to 'Show', tac %>
+        <%= link_to image_tag(tac.image.url(:medium)), tac %>
+        <p><%= tac.description %></p>
+        <strong><%= tac.user.email if tac.user %></strong>
         <% if tac.user == current_user %>
-          <%= link_to 'Edit', edit_tac_path(tac) %>
-          <%= link_to 'Destroy', tac, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="actions">
+          <%= link_to edit_tac_path(tac) do %>
+            <span class="glyphicon glyphicon-edit"></span> Edit &nbsp;
+          <% end %>
+          <%= link_to tac, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <span class="glyphicon glyphicon-trash"></span> Delete
+          <% end %>
+          </div>
         <% end %>
       </div>
     </div>

@@ -14,14 +14,38 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
+        <li>
+          <%= link_to root_path do %>
+            <span class="glyphicon glyphicon-home"></span> Home
+          <% end %>
+        </li>
+        <li>
+          <%= link_to about_path do %>
+            <span class="glyphicon glyphicon-info-sign"></span> About
+          <% end %>
+        </li>
         <% if user_signed_in? %>
-          <li><%= link_to 'New Tac', new_tac_path %></li>
-          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <li>
+            <%= link_to new_tac_path do %>
+              <span class="glyphicon glyphicon-plus-sign"></span> New Tac
+            <% end %>
+          </li>
+          <li>
+            <%= link_to edit_user_registration_path do %>
+              <span class="glyphicon glyphicon-cog"></span> Account Settings
+            <% end %>
+          </li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span> Sign Out
+            <% end %>
+          </li>
         <% else %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li>
+            <%= link_to new_user_session_path do %>
+              <span class="glyphicon glyphicon-log-in"></span> Sign In
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
