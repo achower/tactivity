@@ -30,6 +30,10 @@ gem 'devise', '~> 4.3.0'
 gem 'paperclip', '~> 4.2'
 # Images on Heroku are good too
 gem 'aws-sdk', '< 2.0'
+# Used to limit the number of Tacs loaded on page
+gem 'will_paginate', '~> 3.0.5'
+# Makes our Pagination page links pretty with bootstrap
+gem 'will_paginate-bootstrap'
 
 group :production do
   gem 'pg'
