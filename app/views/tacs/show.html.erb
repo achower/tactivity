@@ -11,7 +11,7 @@
 				<p><%= @tac.description %></p>
 				<p><strong><%= @tac.user.name if @tac.user %></strong></p>
 				
-				<% if @tac.user == current_user %>
+				<% if current_user && @tac.user == current_user %>
 					<%= link_to edit_tac_path(@tac) do %>
 						<span class="glyphicon glyphicon-edit"></span> Edit
 					<% end %>
