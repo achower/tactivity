@@ -10,13 +10,13 @@
         <% if current_user && tac.user == current_user %>
           <div class="actions">
             <%= link_to edit_tac_path(tac) do %>
-              <span class="glyphicon glyphicon-edit"></span> Edit &nbsp;
+              <span class="glyphicon glyphicon-edit"></span> Edit&nbsp;
             <% end %>
-            <div class="delete-link">
+            <span class="delete-link">
               <%= link_to tac, method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <span class="glyphicon glyphicon-trash"></span> Delete
               <% end %>
-            </div>
+            </span>
           </div>
         <% end %>
       </div>
