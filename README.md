@@ -1,24 +1,49 @@
-# README
+# TACTIVITY
+**Link to project:** https://quiet-tor-53873.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Tactivity Home Page](https://raw.githubusercontent.com/achower/tactivity/master/public/images/Home_Page.png)
 
-Things you may want to cover:
+An interpretation of the [Pinteresting project](https://github.com/search?utf8=%E2%9C%93&q=pinteresting&type=) (find other examples here) thats purpose was to try to understand and recreate how a mainstream application functions
 
-* Ruby version
+Registered users can create, update and delete their own tacs. Any user can read any tac.
 
-* System dependencies
+## How It's Made:
 
-* Configuration
+**Tech used:** HTML, CSS, JavaScript, Ruby, Rails
 
-* Database creation
+**Important Gems:**
 
-* Database initialization
+* Devise - for User Authentication
 
-* How to run the test suite
+* Postgres - for production database when using Heroku
 
-* Services (job queues, cache servers, search engines, etc.)
+* Paperclip - for uploading images
 
-* Deployment instructions
+* Aws-sdk - for storing images on production
 
-* ...
+* Masonry-rails - for smooth transitions for when tacs are resized or are moved from creation/deletion
+
+Set up the application on Heroku, then set up your AWS account here:
+* http://aws.amazon.com/
+Read this
+* https://devcenter.heroku.com/articles/paperclip-s3
+
+Add the following to your config/environments/production.rb file, then add your keys via the Heroku UI
+
+  config.paperclip_defaults = {
+  storage: :s3,
+  s3_protocol: :https,
+  s3_credentials: {
+    bucket: ENV.fetch('S3_BUCKET_NAME'),
+    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    s3_region: ENV.fetch('AWS_REGION'),
+    }
+  }
+
+This app was my first exploration into the bootstrap library. (I love it)
+
+## Challenges:
+
+Biggest struggle was getting AWS set up. You need to give it a credit card because after a year you'll start paying for the service. The original instructions I was following didn't mention that you would need to also provide the protocol type and region for your bucket, which I included in the code snippet above.
+
