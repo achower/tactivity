@@ -25,7 +25,8 @@ Registered users can create, update and delete their own tacs. Any user can read
 
 Set up the application on Heroku, then set up your AWS account here:
 * http://aws.amazon.com/
-Read this
+
+And Read this:
 * https://devcenter.heroku.com/articles/paperclip-s3
 
 Add the following to your config/environments/production.rb file, then add your keys via the Heroku UI
