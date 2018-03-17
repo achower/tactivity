@@ -48,3 +48,6 @@ This app was my first exploration into the bootstrap library. (I love it)
 
 Biggest struggle was getting AWS set up. You need to give it a credit card because after a year you'll start paying for the service. The original instructions I was following didn't mention that you would need to also provide the protocol type and region for your bucket, which I included in the code snippet above.
 
+## Known Issues:
+
+As of 16-Mar-2018, I updated the paperclip gem after I was notified about a security vulnerability, this has caused the app to crash. I will need to investigate further to make the app usable again. It is most likely how it interacts with AWS-SDK, but I will need to do more research and testing.
