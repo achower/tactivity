@@ -27,7 +27,7 @@ gem 'bootstrap-sass'
 # Lets make some users!
 gem 'devise', '~> 4.3.0'
 # Images are good
-gem 'paperclip', '~> 4.2'
+gem 'paperclip', '~> 5.2.0'
 # Images on Heroku are good too
 gem 'aws-sdk', '< 2.0'
 # Used to limit the number of Tacs loaded on page
